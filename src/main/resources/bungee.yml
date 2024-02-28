@@ -1,0 +1,3 @@
+name: StatsAPI
+version: '${project.version}'
+main: de.devsnx.statsapi.StatsAP
