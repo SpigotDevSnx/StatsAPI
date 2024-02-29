@@ -18,8 +18,9 @@ public final class StatsAPI {
     private RedissonClient redisson;
     private Gson gson;
     private UUIDFetcher uuidFetcher;
+    private String gameMode;
 
-    public StatsAPI(String host, Integer port, String username, String password, Integer database){
+    public StatsAPI(String host, Integer port, String username, String password, Integer database, String gameMode){
 
         statsAPI = this;
         gson = new GsonBuilder().setPrettyPrinting().create();
@@ -31,6 +32,8 @@ public final class StatsAPI {
 
         statsManager = new StatsManager(statsAPI);
         uuidFetcher = new UUIDFetcher(statsAPI);
+
+        this.gameMode = gameMode;
     }
 
 }

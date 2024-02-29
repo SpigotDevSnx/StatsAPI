@@ -1,6 +1,7 @@
 package de.devsnx.statsapi.manager;
 
 import de.devsnx.statsapi.StatsAPI;
+import lombok.Data;
 
 import java.util.UUID;
 
@@ -9,6 +10,7 @@ import java.util.UUID;
  * @since 28.02.2024 23:34
  */
 
+@Data
 public class Stats {
 
     private UUID uuid;
@@ -19,6 +21,10 @@ public class Stats {
     private Integer wins;
     private Integer games;
     private Integer openChests;
+    private Integer traveledBlocks;
+    private Integer breakedBlocks;
+    private Integer placedBlocks;
+    private Integer killedMobs;
 
     public Stats(UUID uuid, String name) {
         this.uuid = uuid;
@@ -29,6 +35,10 @@ public class Stats {
         this.wins = 0;
         this.games = 0;
         this.openChests = 0;
+        this.traveledBlocks = 0;
+        this.breakedBlocks = 0;
+        this.placedBlocks = 0;
+        this.killedMobs = 0;
     }
 
     public void update() {
